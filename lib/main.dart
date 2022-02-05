@@ -15,6 +15,7 @@ class myApp extends StatelessWidget {
         backgroundColor: Colors.green[400],
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -34,35 +35,44 @@ class myApp extends StatelessWidget {
                     fontFamily: 'Source Sans Pro',
                     fontSize: 20.0,
                     color: Colors.black),
-              ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10.0),
+              ), SizedBox(height: 20.0,
+              width: 150.0,
+              child: Divider(color: Colors.amberAccent,),),
+              Card(
+              
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: [
-                    Icon(Icons.phone, color: Colors.green),SizedBox(width: 10.0,),
-                    Text(
-                      '+91 99949 04147',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20.0),
-                    )
-                  ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.green,
+                  ),
+                  title: Text(
+                    '+91 99949 04147',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0),
+                  ),
                 ),
-              ),Container( color: Colors.white,
-                padding: EdgeInsets.all(10.0),
+              ),
+             
+              Card(
+                
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: [
-                    Icon(Icons.email, color: Colors.green),SizedBox(width: 10.0,),
-                    Text(
-                      'wibi1608@gmail.com',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20.0),)],),),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.green,
+                  ),
+                  title: Text(
+                    'wibi1608@gmail.com',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
